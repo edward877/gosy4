@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <title th:text="${user.getLogin()}"/>-->
+    <title>User page</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}" href="../../css/index.css" />
+</head>
+<body>
+<div class="form">
+        <div class="field">Логин: <span th:text="${user.getLogin()}"></span> </div>
+
+        <div class="field">Email-адрес: <span th:text="${user.getEmail()}"></span> </div>
+
+        <div class="field">Пароль: <span th:text="${user.getPassword()}"></span> </div>
+
+        <div class="field">Фамилия: <span th:text="${user.getFamilyName()}"></span> </div>
+
+        <div class="field">Имя: <span th:text="${user.getFirstName()}"></span> </div>
+
+        <div class="field">Отчество: <span th:text="${user.getFatherName()}"></span> </div>
+
+        <div class="field">Город: <span th:text="${user.getCity()}"></span> </div>
+
+        <div class="field">Улица: <span th:text="${user.getStreet()}"></span> </div>
+
+        <div class="field">Номер дома: <span th:text="${user.getHomeNumber()}"></span> </div>
+
+        <div class="field">Номер квартиры: <span th:text="${user.getRoomNumber()}"></span> </p>
+
+        <div class="field">Номер телефона: <span th:text="${user.getRoomNumber()}"></span> </div>
+</div>
+</body>
+</html>

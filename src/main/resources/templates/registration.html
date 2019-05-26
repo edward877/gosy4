@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}" href="../../css/index.css" />
+</head>
+<body>
+
+<div class="form">
+    <h2>Введите данные:</h2>
+    <div th:if="${error}" class="error">
+        <h4 th:text="${error}"/>
+    </div>
+    <form action="#" th:action="@{/}" method="post">
+        <div class="field">
+            <div>Логин (только латинские буквы, цифры и нижнее подчеркивание)</div>
+            <div><input name="login" pattern="[A-Za-z0-9_]+" required></div>
+        </div>
+
+        <div class="field">
+            <div>E-mail</div>
+            <div><input id= "email" name="email" type="email" required></div>
+        </div>
+
+        <div class="field">
+            <div>Пароль</div>
+            <div><input name="password" type="password" required></div>
+        </div>
+
+        <div class="field">
+            <div>Фамилия</div>
+            <div><input name="familyName" pattern="[A-Za-zА-Яа-я]+"  required></div>
+        </div>
+
+        <div class="field">
+            <div>Имя</div>
+            <div><input name="firstName" pattern="[A-Za-zА-Яа-я]+"  required></div>
+        </div>
+
+        <div class="field">
+            <div>Отчество (необязательно)</div>
+            <div><input name="fatherName" pattern="[A-Za-zА-Яа-я]+" ></div>
+        </div>
+
+        <div class="field">
+            <div>Город</div>
+            <div><input name="city" pattern="[A-Za-zА-Яа-я]+"  required></div>
+        </div>
+
+        <div class="field">
+            <div>Улица</div>
+            <div><input name="street" pattern="[A-Za-zА-Яа-я0-9]+" required></div>
+        </div>
+
+        <div class="field">
+             <div>Номер дома</div>
+             <div><input name="homeNumber "  pattern="[A-Za-zА-Яа-я0-9]+" required></div>
+        </div>
+
+        <div class="field">
+            <div>Номер квартиры</div>
+            <div><input name="roomNumber" pattern="[A-Za-zА-Яа-я0-9]+" required></div>
+        </div>
+
+        <div class="field">
+            <div>Номер телефона в формате 7-XXX-XXX-XX-XX</div>
+            <div><input name="phoneNumber" pattern="7-?[0-9]{3}-?[0-9]{3}-?[0-9]{2}-?[0-9]{2}" required></div>
+        </div>
+
+        <p><input type="submit" value="Отправить"></p>
+    </form>
+</div>
+</body>
+</html>
